@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="res/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="res/stylesheet.css">
+    <script src="res/script.js"></script>
+
+    <title>A Schlatzigen Lustlöcher's Christmas Special</title>
+
+    <link rel="shortcut icon" type="image/png" href="res/assets/Christmas-Gift.svg">
+  </head>
+  <body onload="getFileInfo();">
+    <div class="bg-0" id="background">
+    </div>
+    <main class="" data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+      <nav class="navigator d-none d-sm-block">
+        <div class="d-flex justify-content-around border-bottom mx-10 px-10" id="list-example">
+          <a class="navigator-link" href="index.html#list-item-1">Home</a>
+          <a class="navigator-link" href="index.html#list-item-2">Anleitung</a>
+          <a class="navigator-link" href="index.html#list-item-3">Eingabe</a>
+          <a class="navigator-link" href="uebersicht.html">Übersicht</a>
+        </div>
+      </nav>
+
+      <section class="text-center d-flex flex-column justify-content-around align-items-center" id="list-item-1">
+        <div class="bg-1 d-none d-sm-block">
+        </div>
+        <span></span>
+        <h1 class="display-3 front p-3 fancy-font" >A Schlatzigen Lustlöcher´s Christmas Special</h1>
+        <img src="res/assets/chevron-down.svg" height="40px" alt="Scroll">
+      </section>
+
+
+      <section class="d-flex flex-column justify-content-around align-items-center" id="list-item-2">
+        <div class="bg-1 d-none d-sm-block">
+        </div>
+        <h2 class="display-4 mb-4 front">Anleitung</h2>
+        <div class="container front">
+          <div class="alert alert-light" role="alert">
+            A simple light alert with an example link. Give it a click if you like.
+          </div>
+          <div class="alert alert-light" role="alert">
+            A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          </div>
+          <div class="alert alert-light" role="alert">
+            A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          </div>
+        </div>
+        <img src="res/assets/chevron-down.svg" height="40px" alt="Scroll">
+      </section>
+
+      <section class="text-center d-flex flex-column justify-content-around align-items-center" id="list-item-3">
+        <div class="bg-1 d-none d-sm-block">
+        </div>
+        <h2 class="display-4 mb-4 front">Eingabe</h2>
+        <div class="container scroll front" id="input-container">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="personID">Ich bin Nr.</label>
+            </div>
+            <select class="custom-select" id="personID">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <script type="text/javascript">
+            var inputCount = 0;
+            var container = document.getElementById('input-container');
+            for(i = 0; i<6; i++){
+              //create div and lable
+              var groupDiv = document.createElement("div");
+              groupDiv.classList.add("input-group","mb-3");
+              groupDiv.id = "groupDiv"+i;
+
+              if(i!=0){
+                groupDiv.hidden = true;
+              }
+
+              var labelDiv = document.createElement("div");
+              labelDiv.classList.add("input-group-prepend");
+
+              var label = document.createElement("label");
+              label.classList.add("input-group-text");
+              label.for = "ref"+(i+1);
+              label.textContent = "Ich ziehe nicht NR.";
+
+              labelDiv.appendChild(label);
+              groupDiv.appendChild(labelDiv);
+
+              //create select
+              var select = document.createElement("select");
+              select.classList.add("custom-select");
+              select.id = "ref"+(i+1);
+
+              //create default option
+              var opt = document.createElement("option");
+              opt.value = "";
+              opt.textContent = "";
+              select.appendChild(opt);
+
+              //create other options
+              for(k = 1; k<=12; k++){
+                var opt = document.createElement("option");
+                opt.value = k;
+                opt.textContent = k;
+                select.appendChild(opt);
+              }
+              groupDiv.appendChild(select);
+              container.appendChild(groupDiv);
+            }
+          </script>
+          <button type="button" id="addBtn" class="btn btn-light m-3" onclick="inputCount++; addInput(inputCount);">+</button>
+        </div>
+        <a class="btn btn-success btn-lg front" onclick="saveFile();">Submit</a>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
