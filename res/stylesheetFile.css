@@ -1,15 +1,128 @@
 html, body {
   height: 100%;
+  width: 100%;
   overflow: hidden;
+  background-color: black;
 }
 
-main {
-  height: 100%;
+* {
   margin: 0;
   padding: 0;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  box-sizing: border-box;
 }
+
+section {
+  height: 100vh;
+  width: 100vw;
+  padding: 8% 5%;
+  color: white;
+  overflow-x: auto;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 100;
+}
+
+section img {
+  filter: invert(100%);
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  perspective: 100px;
+}
+
+.parallax_group {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.parallax_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.bg-0 {
+  background-image: url(assets/m-bg-0.png);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-100px) scale(2);
+  z-index: 0;
+}
+
+.bg-1 {
+  background-image: url(assets/m-bg-1.png);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-75px) scale(1.75);
+  z-index: 2;
+}
+
+.bg-2 {
+  background-image: url(assets/m-bg-2.png);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-50px) scale(1.5);
+  z-index: 4;
+}
+
+.bg-3 {
+  background-image: url(assets/m-bg-3.png);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(0px) scale(1);
+  z-index: 6;
+}
+
+.bg-0-far {
+  background-image: url(assets/m-bg-0.png);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-1000px) translateY(-150%) scale(12);
+  z-index: 0;
+}
+
+.bg-1-far {
+  background-image: url(assets/m-bg-1.png);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-700px) scale(10);
+  z-index: 2;
+}
+
+.bg-2-far {
+  background-image: url(assets/m-bg-2.png);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-600px) scale(7);
+  z-index: 4;
+}
+
+.bg-3-far {
+  background-image: url(assets/m-bg-3.png);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-200px) scale(3);
+  z-index: 6;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.title {
+
+}
+
+
+
 
 .display-4 {
   font-size: 1.8rem;
@@ -55,32 +168,11 @@ main {
   table-layout: fixed;
 }
 
-.screenfix {
-  position: relative;
-  z-index: 7;
-  height: 100%;
-}
-
 .fancy-font{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', serif;
 }
 
-.bg-0 {
-
-  background-color: black;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 0;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-.bg-1 {
+.bg-d {
   background-color: rgba(8, 16, 22, 0.2);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -93,31 +185,6 @@ main {
   right: 5%;
   z-index: 5;
   border: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-section {
-  padding: 8% 5%;
-  height: 100%;
-  margin:0px;
-  z-index: 10;
-  position: relative;
-  color: white;
-  scroll-snap-align: center;
-  filter: opacity(1);
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-section img {
-  filter: invert(100%);
-  z-index: 2000;
-  position: relative;
-}
-
-.content-box {
-  height: 10%;
-  width: 10%;
-  border-radius: 4px;
 }
 
 .navigator {
