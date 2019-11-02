@@ -54,7 +54,7 @@ section img {
 
 
 .bg-0 {
-  background-image: url(assets/m-bg-0.png);
+  background-image: url(assets/m-bg-0.jpg);
   background-size: cover;
   background-position: center;
   transform: translateZ(-100px) scale(2);
@@ -86,7 +86,7 @@ section img {
 }
 
 .bg-0-far {
-  background-image: url(assets/m-bg-0.png);
+  background-image: url(assets/m-bg-0.jpg);
   background-size: cover;
   background-position: center;
   transform: translateZ(-2000px) scale(26);
@@ -126,7 +126,7 @@ section img {
 }
 
 .bg-woods {
-  background-image: url(assets/m-bg-woods.png);
+  background-image: url(assets/m-bg-woods.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
