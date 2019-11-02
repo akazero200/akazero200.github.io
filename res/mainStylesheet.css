@@ -85,14 +85,6 @@ section img {
   z-index: 6;
 }
 
-.bg-3-1 {
-  background-color: black;
-  background-size: cover;
-  background-position: center;
-  transform: translateZ(0px) translateY(100%) scale(1);
-  z-index: 7;
-}
-
 .bg-0-far {
   background-image: url(assets/m-bg-0.jpg);
   background-size: cover;
@@ -237,7 +229,7 @@ section img {
   border-radius: 20px;
   text-align: center;
   padding: 1.5rem 1rem;
-  margin: 8px 20px 8px 2px;
+  margin: 0;
   max-width: 600px;
 }
 
