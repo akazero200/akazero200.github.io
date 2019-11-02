@@ -3,6 +3,8 @@ const url_file_info = "https://api.github.com/repos/akazero200/EB-19/contents/se
 var fileInfo;
 var file;
 var pin;
+var inputCount = 0;
+var personID;
 
 //use a random url ending to prevent caching
 function randUrl(url) {
@@ -54,7 +56,7 @@ function fillTable() {
     tr.appendChild(th);
 
     //fill td elements
-    for(k = 0; k< 6; k++){
+    for(k = 0; k< 4; k++){
       var td = document.createElement("td");
 
       if(k<file.selection[i].ref.length){ //if  there is an entry -> display it; else -> empty td
@@ -68,26 +70,26 @@ function fillTable() {
 }
 
 //saving input to json file
-function saveFile(){
-  const personIDTag = document.getElementById('personID');
+function saveSelection(){
   const refTags = {
     ref: [
+      document.getElementById('ref0'),
       document.getElementById('ref1'),
       document.getElementById('ref2'),
-      document.getElementById('ref3'),
-      document.getElementById('ref4'),
-      document.getElementById('ref5'),
-      document.getElementById('ref6')]
+      document.getElementById('ref3')]
   };
 
-  personID = personIDTag.options[personIDTag.selectedIndex].value-1;
+  if(file.part[personID]==pin && file!=null){
+    for(i = 0; i<4; i++){
+      file.selection[personID].ref[i] = refTags.ref[i].options[refTags.ref[i].selectedIndex].value;
+    }
+    uploadFile();
+    document.getElementById('content-table').innerHTML = '';
 
-  for(i = 0; i<6; i++){
-    file.selection[personID].ref[i] = refTags.ref[i].options[refTags.ref[i].selectedIndex].value;
+    fillTable();
   }
-
-  uploadFile();
 }
+
 function uploadFile() {
   console.log(JSON.stringify(file));
   var encFileContent = btoa(JSON.stringify(file));
@@ -115,15 +117,8 @@ function uploadFile() {
 
 function addInput(countInput) {
   document.getElementById("groupDiv"+countInput).removeAttribute("hidden");
-  if(countInput == 5){
+  if(countInput == 3){
     document.getElementById('addBtn').hidden = "true";
-  }
-}
-
-function teilnehmen() {
-  pin = document.getElementById('pinInput').value;
-  if (pin.length==4 && !isNaN(pin)) {
-    window.location.href = "teilnahme.html?p="+pin;
   }
 }
 
@@ -153,25 +148,37 @@ function storePin() {
   }
 }
 
-
 function getGET() {
   var $_GET=[];
   window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){$_GET[name]=value;});
   return $_GET;
 }
 
-function getNumber(){
-  var nrDisplay = document.getElementById('nrDisplay');
-  var pin = document.getElementById('pinInput').value;
-  var nr = file.part.indexOf(pin);
-
-  if(nr>=0){
-    nrDisplay.textContent = "Deine Nr. ist: "+(nr+1);
-  } else {
-    nrDisplay.textContent = "Gib deinen PIN ein um deine Nummer abzufragen:"
-  }
-}
-
 function getToken(){
   return atob("YTZlMDE0NmM3OGYyN2U1MGE4MTBjYTljMGI2MDNjNzI2NzQ3ODgzYw==");
+}
+
+function logon(){
+  var pIDselect = document.getElementById('loginNr');
+  inputPID = pIDselect.options[pIDselect.selectedIndex].value-1;
+  var inputPIN = document.getElementById('loginPIN').value;
+
+  if(file.part[inputPID]== inputPIN){
+    personID = inputPID;
+    pin = inputPIN;
+
+    var angemeldet = document.getElementById('angemeldet');
+    var angDiv = document.getElementById('angemeldetDiv');
+    angDiv.classList.remove("bg-danger");
+    angDiv.classList.add("bg-success");
+
+    angemeldet.textContent = "Angemeldet!";
+    angemeldet.classList.remove("font-weight-bold");
+    angemeldet.classList.add("display-5");
+
+    document.getElementById('angemeldetDesc').hidden = true;
+
+    fillTable();
+    console.log("logon success");
+  }
 }
