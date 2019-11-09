@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68aa9486-8f85-448d-939e-c45f909e1317" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/logic/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/logic/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/logic/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/logic/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/logic/Shuffler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/logic/Shuffler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../res/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../res/mainScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../winter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../winter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../res/assets/spruce_branches_needles_128622_2560x1440.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../res/assets/spruce_branches_needles_128622_2560x1440.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
