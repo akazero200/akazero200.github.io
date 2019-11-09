@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="68aa9486-8f85-448d-939e-c45f909e1317" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../res/particleConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../res/particleConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../res/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../res/mainScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../res/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../res/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
