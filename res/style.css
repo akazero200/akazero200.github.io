@@ -12,6 +12,11 @@ html, body{
   z-index: 5;
 }
 
+#form {
+  position: fixed;
+  z-index: 70;
+}
+
 .bg-0 {
   background-image: url("assets/spruce_branches_needles_128622_2560x1440.jpg");
   background-repeat: no-repeat;

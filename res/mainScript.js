@@ -53,6 +53,7 @@ function getGET() {
   return $_GET;
 }
 
+
 function logon(){
   var pIDselect = document.getElementById('loginNr');
   inputPID = pIDselect.options[pIDselect.selectedIndex].value-1;
@@ -73,8 +74,11 @@ function getGift() {
   var giftbox = document.getElementById('giftbox');
 
   form.classList.add("slide-out-blurred-top");
-  giftbox.removeAttribute('hidden');
-  form.hidden = 'true';
+
+  setTimeout(function() {
+    //form.hidden = 'true';
+    giftbox.removeAttribute('hidden');
+  }, 1200);
 }
 
 function getNr() {
