@@ -5,6 +5,9 @@ var file;
 var pin;
 var inputCount = 0;
 var personID;
+var boxClicked = false;
+
+
 
 //use a random url ending to prevent caching
 function randUrl(url) {
@@ -180,5 +183,29 @@ function logon(){
 
     fillTable();
     console.log("logon success");
+  }
+}
+
+
+function getGift() {
+  var form = document.getElementById('form');
+  var giftbox = document.getElementById('giftbox');
+
+  form.classList.add("slide-out-blurred-top");
+
+  setTimeout(function() {
+    form.hidden = 'true';
+    giftbox.removeAttribute('hidden');
+  }, 1200);
+}
+
+function getNr() {
+  if(!boxClicked){
+    boxClicked = true;
+
+    var giftbox = document.getElementById('giftbox');
+    var nrfield = document.getElementById('nrfield');
+    giftbox.classList.add('slide-bottom');
+    nrfield.removeAttribute('hidden');
   }
 }
