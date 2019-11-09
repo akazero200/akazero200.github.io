@@ -53,8 +53,8 @@
 
 
 .slide-out-blurred-top {
-	-webkit-animation: slide-out-blurred-top 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) 200ms both;
-	        animation: slide-out-blurred-top 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) 200ms both;
+	-webkit-animation: slide-out-blurred-top 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045)  both;
+	        animation: slide-out-blurred-top 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045)  both;
 }
 
 

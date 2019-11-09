@@ -14,9 +14,6 @@ import java.util.TreeSet;
 
 public class Controller {
 	private Connector con;
-	private Shuffler shuffler;
-
-	private  JSONArray pickedFile;
 	private JSONArray selectedFile;
 
 	private Logger log = LoggerFactory.getLogger(Controller.class);
@@ -27,7 +24,6 @@ public class Controller {
 
 	public void run(){
 		try {
-			pickedFile = con.getPickedFile();
 			selectedFile = con.getSelectedFile();
 
 		} catch (IOException e){
@@ -35,17 +31,17 @@ public class Controller {
 			System.exit(1);
 		}
 
-		shuffler = new Shuffler(buildPersonList(selectedFile));
-		try {
-			printPersons(shuffler.shuffle());
-			printPersons(shuffler.shuffle());
-			printPersons(shuffler.shuffle());
-			printPersons(shuffler.shuffle());
-			printPersons(shuffler.shuffle());
-			printPersons(shuffler.shuffle());
-		} catch (RuntimeException e) {
-			System.out.println(e.getMessage());
+		Shuffler shuffler = new Shuffler(buildPersonList(selectedFile));
+		boolean success = false;
+		while(!success){
+			try {
+				System.out.println(createPickedJsonString(shuffler.shuffle()));
+				success = true;
+			} catch (RuntimeException e) {
+				System.out.println(e.getMessage());
+			}
 		}
+
 	}
 
 	private TreeSet<Person> buildPersonList(JSONArray selected){
@@ -91,6 +87,18 @@ public class Controller {
 			sb.append(pickedNR).append('\n');
 		}
 		System.out.println(sb.toString());
+	}
+
+	private String createPickedJsonString(Set<Person> persons){
+		StringBuilder sb = new StringBuilder("[");
+
+		for(Person p:persons){
+			sb.append('"').append(p.getPickedNr()).append('"').append(',');
+		}
+		sb.deleteCharAt(sb.length()-1);
+		sb.append(']');
+
+		return sb.toString();
 	}
 
 

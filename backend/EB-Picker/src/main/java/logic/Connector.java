@@ -13,30 +13,12 @@ import java.util.Base64;
 public class Connector {
 	private OkHttpClient client = new OkHttpClient();
 	private Base64.Decoder decoder = Base64.getDecoder();
-	private final String pickedFileInfoURL = "https://api.github.com/repos/akazero200/EB-19/contents/picked.json";
 	private final String selectedFileInfoURL = "https://api.github.com/repos/akazero200/EB-19/contents/selected.json";
 
-	private String pickedFileURL = "";
 	private String selectedFileURL = "";
-
-	private final String token = "YTZlMDE0NmM3OGYyN2U1MGE4MTBjYTljMGI2MDNjNzI2NzQ3ODgzYw==";
 
 
 	public Connector() {
-	}
-
-	/**
-	 * returns picked.json
-	 */
-	public JSONArray getPickedFile() throws IOException{
-		if(pickedFileURL.isEmpty()){
-			pickedFileURL = getFileURL(pickedFileInfoURL);
-		}
-
-		JSONObject response = new JSONObject(getFromUrl(pickedFileURL));
-		String responseContent = response.getString("content");
-
-		return new JSONArray(new String(decoder.decode(responseContent.substring(0,responseContent.length()-1))));
 	}
 
 	/**
