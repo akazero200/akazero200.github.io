@@ -73,11 +73,8 @@ function getGift() {
   var giftbox = document.getElementById('giftbox');
 
   form.classList.add("slide-out-blurred-top");
-
-  setTimeout(function() {
-    form.hidden = 'true';
-    giftbox.removeAttribute('hidden');
-  }, 1200);
+  giftbox.removeAttribute('hidden');
+  form.hidden = 'true';
 }
 
 function getNr() {
