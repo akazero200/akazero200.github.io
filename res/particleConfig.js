@@ -77,11 +77,11 @@ particlesJS('particles-js',
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "bubble"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "repulse"
       },
       "resize": true
@@ -112,7 +112,7 @@ particlesJS('particles-js',
       }
     }
   },
-  "retina_detect": true
+  "retina_detect": false
 }
 
 );
