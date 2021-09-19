@@ -1,0 +1,166 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  line-height: 1;
+  height: 100%;
+  width: 100%;
+	color: white;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  background: url("assets/hopfen_background_black.jpg") no-repeat fixed center;
+	background-color:black;
+	background-size: cover;
+	color:white;
+	font-size: 1.2rem;
+}
+
+.layout {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 2fr 8fr 1fr;
+	grid-template-columns: 100%;
+	grid-template-areas:"header" "content" "footer";
+}
+
+.header {
+	grid-area: header;
+	padding: 1rem;
+	padding-top: 5vh;
+}
+
+.content {
+	grid-area: content;
+	padding: 0 1rem;
+}
+
+.footer {
+	grid-area: footer;
+	padding: .8rem;
+}
+
+.overlay-box {
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+}
+
+section {
+	scroll-snap-align: start;
+	z-index: 10;
+}
+
+.title-box {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	width: 90%;
+	max-width: 25rem;
+	min-width: 10rem;
+}
+
+.subtitle {
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 1.4rem;
+}
+
+.next-page-arrow-box {
+	display: flex;
+	justify-content: center;
+}
+
+.bottle {
+	height: 80%;
+	margin: auto
+}
+
+.next-page-arrow {
+	filter: invert(100%);
+	height: 2rem;
+}
+
+.content-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.cap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 0;
+	flex-grow: 2;
+}
+
+.cap img {
+	height: 3rem;
+}
+
+.description {
+	flex-grow: 3;
+	display: flex;
+	flex-direction: column;
+}
+
+
+h2 {
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1.1;
+	margin: 0;
+}
+
+ul {
+	margin:0;
+	padding-top: 1rem;
+}
+
+
+.hop-section {
+	display: flex;
+	justify-content: space-around;
+	margin: 2rem 0;
+}
+
+.hop-entry img {
+	height: 1.5rem;
+	margin-right: 1rem;
+
+}
+
+.hop-section span {
+		vertical-align: top;
+		position: block;
+}
+
+.filled-section {
+	text-align: center;
+}
+
+.grill-chill-font {
+	font-family: 'Abril Fatface', cursive;
+
+}
+
+.hazy-days-font {
+	font-family: 'Bad Script', cursive;
+}
+
+
+
