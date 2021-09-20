@@ -2,9 +2,10 @@ html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   line-height: 1;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 	color: white;
+	height: -webkit-fill-available;
 }
 
 body {
@@ -13,13 +14,14 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 100%;
-  width: 100%;
-  background: url("assets/hopfen_background_black.jpg") no-repeat fixed center;
+	height: 100vh;
+  	width: 100%;
+  	background: url("assets/hopfen_background_black.jpg") no-repeat fixed center;
 	background-color:black;
 	background-size: cover;
 	color:white;
 	font-size: 1.2rem;
+	height: -webkit-fill-available;
 }
 
 .layout {
@@ -34,7 +36,6 @@ body {
 .header {
 	grid-area: header;
 	padding: 1rem;
-	padding-top: 5vh;
 }
 
 .content {
@@ -141,12 +142,11 @@ ul {
 .hop-entry img {
 	height: 1.5rem;
 	margin-right: 1rem;
-
 }
 
 .hop-section span {
-		vertical-align: top;
-		position: block;
+	vertical-align: top;
+	position: block;
 }
 
 .filled-section {
@@ -162,5 +162,56 @@ ul {
 	font-family: 'Bad Script', cursive;
 }
 
+@media (min-height: 800px) {
+	body {
+		font-size: 1.6rem;
+	}
+
+	.title {
+		width: 90%;
+		max-width: 30rem;
+	}
+
+	.subtitle {
+		margin-top: 1rem;
+		font-size: 1.6rem;
+	}
+
+	.header {
+		grid-area: header;
+		padding: 2rem;
+		padding-top: 4rem;
+	}
+
+	.cap {
+		margin: 2rem 0;
+		flex-grow: 3;
+	}
+
+	.description {
+	flex-grow: 4;
+
+	}
+
+	.cap img {
+		height: 3.5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+		line-height: 1.1;
+		margin: 0;
+	}
+
+	ul {
+		margin:0;
+		padding-top: 1rem;
+	}
+
+	.hop-section {
+		margin: 4rem 0;
+	}
+
+}
 
 
