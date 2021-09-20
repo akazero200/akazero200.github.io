@@ -1,33 +1,40 @@
 html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
   line-height: 1;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 	color: white;
-	height: -webkit-fill-available;
 }
 
 body {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
-	height: 100vh;
+  	font-family: 'Barlow Semi Condensed', sans-serif;
+  	margin: 0;
+  	padding: 0;
+    overflow-x: hidden;
+  	overflow-y: hidden;
+	height: 100%;
   	width: 100%;
   	background: url("assets/hopfen_background_black.jpg") no-repeat fixed center;
 	background-color:black;
 	background-size: cover;
 	color:white;
 	font-size: 1.2rem;
-	height: -webkit-fill-available;
+}
+
+main {
+	height: 100%;
+  	width: 100%;
+	position: absolute;
+	z-index: 10;
+	overflow-x: hidden;
+  	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+  	scroll-behavior: smooth;
 }
 
 .layout {
 	width: 100%;
+	height: 100%;
 	min-height: 100%;
-	height: max-content;
 	display: grid;
 	grid-template-rows: 2fr 8fr 1fr;
 	grid-template-columns: 100%;
@@ -58,7 +65,6 @@ body {
 
 section {
 	scroll-snap-align: start;
-	z-index: 10;
 }
 
 .title-box {
