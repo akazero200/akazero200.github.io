@@ -95,7 +95,8 @@ section {
 
 .bottle {
 	height: 60vh;
-	margin: auto
+	margin: auto;
+	filter: drop-shadow(0px 0px 60px rgba(255, 255, 255, 0.25));
 }
 
 .next-page-arrow {
@@ -162,15 +163,6 @@ ul {
 	text-align: center;
 }
 
-.grill-chill-font {
-	font-family: 'Abril Fatface', cursive;
-
-}
-
-.hazy-days-font {
-	font-family: 'Bad Script', cursive;
-}
-
 @media (min-height: 800px) {
 	body {
 		font-size: 1.6rem;
@@ -224,3 +216,19 @@ ul {
 }
 
 
+.grill-chill-font {
+	font-family: 'Abril Fatface', cursive;
+
+}
+
+.hazy-days-font {
+	font-family: 'Bad Script', cursive;
+}
+
+.dark-side-font {
+	font-family: 'Bungee', cursive;
+}
+
+.cap-black {
+	filter: drop-shadow(0px 0px 20px #fff);
+}
